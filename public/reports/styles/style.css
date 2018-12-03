@@ -175,6 +175,9 @@ button:hover{
     background-color: #79f132;
     font-weight: bold;
 }
+#menu .data-button{
+    background-color: #ff9a3c;
+}
 #main{
     vertical-align: top;
     width: 80%;

@@ -19,7 +19,11 @@
         };
         firebase.initializeApp(config);
     </script>
-    <script src="./scripts/reports.js"></script>
+    <script lang="javascript" src="./dist/xlsx.full.min.js"></script>
+    <script lang="javascript" src="./dist/fileSaver.min.js"></script>
+    <script lang="javascript" src="./scripts/reports.js"></script>
+    <script lang="javascript" src="./scripts/excel.js"></script>
+    
 </head>
 
 <body>
@@ -72,6 +76,8 @@
                 <h2>Menu</h2>
                 <button onclick="openKeyModal()">Generate Login Keys</button>
                 <button onclick="openGetKeyModal()">Get Login Key</button>
+                <button onclick="getUserData()" class="data-button">Get User Data</button>
+                <button onclick="getPostData()" class="data-button">Get Post Data</button>
             </div>
         </div>
         <div id="main">
