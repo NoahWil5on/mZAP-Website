@@ -65,7 +65,7 @@ function getPostData(){
     wb.SheetNames.push("mZAP Data");
     var i = 1;
     var myKeys = [];
-    var ws_data = [['Date','Type','Status', 'Anonymous', 'Number of Likes', 'Description', 'UID']];
+    var ws_data = [['Date','Type','Status', 'Anonymous', 'Number of Likes', 'Description', 'Link to Image', 'UID']];
 
     firebase.database().ref(`positions`).once('value').then(snapshot => {
         snapshot.forEach(snap => {
@@ -80,7 +80,8 @@ function getPostData(){
                 !snap.val().show, 
                 snap.val().likes,
                 snap.val().description,
-                snap.key
+                snap.val().url,
+                snap.val().id
             ]);
         });
     }).then(() => {
