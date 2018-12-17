@@ -153,6 +153,11 @@ button:hover{
 .modal-buttons button{
     padding: 5px;
 }
+.divide{
+    width: 100%;
+    height: 5px;
+    background-color: black;
+}
 #menu{
     vertical-align: top;
     width: 20%;
@@ -177,6 +182,8 @@ button:hover{
 }
 #menu .data-button{
     background-color: #ff9a3c;
+    text-align: left;
+    padding-left: 10px;
 }
 #main{
     vertical-align: top;
