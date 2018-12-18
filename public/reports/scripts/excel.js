@@ -12,7 +12,7 @@ function getUserData(){
     wb.SheetNames.push("mZAP Data");
     var i = 1;
     var myKeys = [];
-    var ws_data = [['Email','Name','First Active', 'Last Active', 'Number of Visits', 'Number of Posts', 'Number of Resolves', 'Number of Likes']];
+    var ws_data = [['UID', 'Email','Name','First Active', 'Last Active', 'Number of Visits', 'Number of Posts', 'Number of Resolves', 'Number of Likes']];
 
     firebase.database().ref(`users`).once('value').then(snapshot => {
         snapshot.forEach(snap => {
@@ -20,6 +20,7 @@ function getUserData(){
             myKeys.push(snap.key);
             //console.log()
             ws_data.push([
+                snap.key,
                 snap.val().email, 
                 snap.val().name, 
                 getDate(snap.val().firstActive), 
