@@ -25,17 +25,16 @@ function getUserData(){
                 snap.val().name, 
                 getDate(snap.val().firstActive), 
                 getDate(snap.val().lastActive), 
-                snap.val().visits, 
-                snap.val().posts]);
+                snap.val().visits]);
         });
     }).then(() => {
         firebase.database().ref(`userRating`).once('value').then(snapshot => {
             snapshot.forEach(snap => {
                 for(var i = 0; i < myKeys.length; i++){
                     if(snap.key == myKeys[i]){
-                        ws_data[i+1][5] = snap.val().posts;
-                        ws_data[i+1][6] = snap.val().resolves;
-                        ws_data[i+1][7] = snap.val().likes;
+                        ws_data[i+1][6] = snap.val().posts;
+                        ws_data[i+1][7] = snap.val().resolves;
+                        ws_data[i+1][8] = snap.val().likes;
                     }
                 }
             });
