@@ -25,7 +25,8 @@ function getUserData(){
                 snap.val().name, 
                 getDate(snap.val().firstActive), 
                 getDate(snap.val().lastActive), 
-                snap.val().visits]);
+                snap.val().visits, 
+                snap.val().posts]);
         });
     }).then(() => {
         firebase.database().ref(`userRating`).once('value').then(snapshot => {
