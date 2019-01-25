@@ -168,7 +168,7 @@ function getPostData(){
         snapshot.forEach(snap => {
             var postType = snap.val().type;
             if(postType == 'cnd'){
-                postType = 'pests'
+                postType = 'cats/dogs'
             }
             ws_data.push([
                 getDate(snap.val().date), 
